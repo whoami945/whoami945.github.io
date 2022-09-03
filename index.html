@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        不忘初心
+    </title>
+    <link href="style/css/base.css" rel="stylesheet" />
+    <link href="style/css/index.css" rel="stylesheet" />
+    <script src="style/js/flexible.js"></script>
+    <script src="style/js/jquery.min.js"></script>
+    <link href="style/hdp/css.css" rel="stylesheet" />
+    <style>
+        .desc span {
+            float: right;
+        }
+
+        * {
+
+            moz-user-select: -moz-none;
+
+            -moz-user-select: none;
+
+            -o-user-select: none;
+
+            -khtml-user-select: none;
+
+            -webkit-user-select: none;
+
+            -ms-user-select: none;
+
+            user-select: none;
+
+        }
+    </style>
+    <script src="style/hdp/jweixin-1.6.0.js"></script>
+    <script>
+        //微信分享<a href="content.aspx">content.aspx</a>
+        wx.config({
+            debug: false,
+            appId: 'wxb8ea9e5ecd25a43a',
+            timestamp: '1661959900',
+            nonceStr: 'test',
+            signature: 'd40928cb40279210cd9654454e8feb01b932dd2c',
+            jsApiList: ['updateTimelineShareData', 'hideMenuItems', 'updateAppMessageShareData', 'chooseImage', 'uploadImage', 'getNetworkType']
+        });
+
+        wx.ready(function () {      //需在用户可能点击分享按钮前就先调用
+
+            wx.hideMenuItems({
+                menuList: ['menuItem:share:qq', 'menuItem:readMode', 'menuItem:share:facebook', 'menuItem:copyUrl', 'menuItem:favorite', 'menuItem:share:QZone', 'menuItem:openWithSafari']
+            });
+
+
+            wx.updateAppMessageShareData({
+                title: '不忘初心的聊天记录',
+                desc: "不忘初心:澳特.25=100元22=50元23=50元49=100元46=50元09=350元37=50元21=300元14=150元29=50元28=50元35=50元\n不忘初心:澳特26=50=@ 15=100@ 48=100@ 24=100@ 12=100@ 10=100@ 22=150@ 三中三10.20.30=50@\n不忘初心:12.24.26.35.19.49各800",
+                link: 'http://weixin.agarden.com.cn/haichon/tz2.aspx?url=http%3a%2f%2fv.agarden.com.cn%2fhaichon%2fchat11.aspx%3fid%3d12006',
+                imgUrl: 'http://weixin.agarden.com.cn/haichon/wuzi.png',
+                success: function () {
+                    // 设置成功
+                }
+            });
+            wx.onMenuShareTimeline({
+                title: '不忘初心的聊天记录',
+                link: 'http://weixin.agarden.com.cn/haichon/tz2.aspx?url=http%3a%2f%2fv.agarden.com.cn%2fhaichon%2fchat11.aspx%3fid%3d12006',
+                imgUrl: 'http://weixin.agarden.com.cn/haichon/wuzi.png',
+                success: function () {
+                    // 设置成功
+                }
+            });
+            wx.error(function (res) {
+
+                // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+            });
+        });
+
+
+
+
+    </script>
+    <script src='style/1.js'></script>
+</head>
+
+<body>
+    <form method="post" action="./chat11.aspx?id=12006" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="e+8OMmvslGhIFXXPNDkvydaSMcukHSyX+jfDJqAkbzpmcPoQI4tcl1Vvgha4yxAZdkJW6xnheBhckmiH2ZeZ9yYWRxNIcQtqXylnpVm1G9HI2tYY2Z5WekAksDV5YMfNgBtEPGk2OB/TTXBOPsXX2TJ2+ggmI8J7xaZgxbK7KcCMcv8oyVdTH/fsBqFHmzTi2+F9zXYrJ9d352PBglr9iB1S9hFyCxUOBBWi5OQxFL+8pm7RwvCf2ciRMA6yqA1/R2PwoCWdjdcy6mpC26mwzBeXkl153QivlfhZO1zxwpdpijEInthUWYLXEGgwvk/FwwSzxT9nytESY6ztnM1CUu5bNnFOfXklUE2ZODQwCMRmCi6IdiUHUzFBzI2bXvmPkJ4EjPoufav7gBYSDHn3hs2z68HXM+j36GNj1vptJwySVB6mTiW3GEtihT9Xr1B2oiiXdFX/O0eS6HZ3baW0V6Rl++xhGIWHOVKsk/j5hlJfbwOp9TglDK9yqqE+HvbJadp0X03I9pxma4jFjibWLFQuapAFBOmAttsUwApb7WW7ff36cdda3KpITHWbteXqS0i5AtmVrJlDD1vD3Jh89GMM6zyfkT9ExTv/TwvkiOMTz1Lm0iNDcCh9D1dv5alPEsBiJDTvNrgNgP/bGXdTPLBootN/rnxd6A3MVws8m5vWGVt1RNZsTkaaY4Bl4aEJob7nGhk6wMlSI1A3DZ+xphr+6aPZ2wmiIv6H1Ljq64dyuy0dCLsqPrXrOmsLYDfsClRzKbUbB6iQQ+Jn+RiN0T5e/areHtxb5Q4rdgSdG88lD0wTPZYThK70F1dfVQ9dMAOzgqnyiPNngpkbWtps7w==" />
+        </div>
+
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EC8DCF4E" />
+        </div>
+
+        <div id="wrapper" style="height:100vh">
+            <div id="scroller">
+                <div class="top"></div>
+                <div class="container">
+                    <div class="header" style="font-family:'Microsoft YaHei'!important">2022-9-2</div>
+                    <div class="chat-list">
+
+
+
+
+
+                        <div class="chat-list-item">
+                            <div class="avatar">
+                                <img style="max-height:100%;max-width:100%" src="http://weixin.agarden.com.cn/haichon/wuzi.png">
+                            </div>
+
+                            <div class="info">
+                                <p class="name" style=" font-family:'Microsoft YaHei'!important;">不忘初心</p>
+                                <p class="time" style="font-family:'Microsoft YaHei'!important;">9-2 22:34</p>
+                            </div>
+                            <p class="desc" style=" word-break:break-all;font-family:'Microsoft YaHei'!important;">
+                                02.45.29.36.38.40.21.22各58
+
+                                <span style='display:none'
+                                    style="float: right;margin-top: 15px; font-size:0.35rem!important;"><a
+                                        href='content_mdy.aspx?time=21839'>置顶</a>&nbsp;&nbsp;<a
+                                        href='content_mdy.aspx?id=21839'>修改</a></span>
+                            </p>
+
+
+                        </div>
+                        <div class="prot"></div>
+
+
+
+
+                        <div class="chat-list-item">
+
+
+                            <div class="info">
+                                <p class="name" style=" font-family:'Microsoft YaHei'!important;">不忘初心</p>
+                                <p class="time" style="font-family:'Microsoft YaHei'!important;">9-2 22:35</p>
+                            </div>
+                            <p class="desc" style=" word-break:break-all;font-family:'Microsoft YaHei'!important;">
+                                12.13.14.15.16.17各12
+
+                                <span style='display:none'
+                                    style="float: right;margin-top: 15px; font-size:0.35rem!important;"><a
+                                        href='content_mdy.aspx?time=21838'>置顶</a>&nbsp;&nbsp;<a
+                                        href='content_mdy.aspx?id=21838'>修改</a></span>
+                            </p>
+
+                        </div>
+                        <div class="prot"></div>
+
+
+
+
+                        <div class="chat-list-item">
+
+
+                            <div class="info">
+                                <p class="name" style=" font-family:'Microsoft YaHei'!important;">不忘初心</p>
+                                <p class="time" style="font-family:'Microsoft YaHei'!important;">9-2 22:35</p>
+                            </div>
+                            <p class="desc" style=" word-break:break-all;font-family:'Microsoft YaHei'!important;">
+                                03 04 05 06各5
+
+                                <span style='display:none'
+                                    style="float: right;margin-top: 15px; font-size:0.35rem!important;"><a
+                                        href='content_mdy.aspx?time=21837'>置顶</a>&nbsp;&nbsp;<a
+                                        href='content_mdy.aspx?id=21837'>修改</a></span>
+                            </p>
+
+                        </div>
+                        <div class="prot"></div>
+
+
+
+
+                        <!-- <div class="chat-list-item">
+
+
+                            <div class="info">
+                                <p class="name" style=" font-family:'Microsoft YaHei'!important;">不忘初心</p>
+                                <p class="time" style="font-family:'Microsoft YaHei'!important;">15:35:02</p>
+                            </div>
+                            <p class="desc" style=" word-break:break-all;font-family:'Microsoft YaHei'!important;">
+                                18.29.38.45.26.18.各500。07=800
+
+                                <span style='display:none'
+                                    style="float: right;margin-top: 15px; font-size:0.35rem!important;"><a
+                                        href='content_mdy.aspx?time=21836'>置顶</a>&nbsp;&nbsp;<a
+                                        href='content_mdy.aspx?id=21836'>修改</a></span>
+                            </p>
+
+                        </div>
+                        <div class="prot"></div> -->
+
+
+
+
+                    </div>
+                </div>
+                <br /><br /><br /><br />
+            </div>
+        </div>
+
+
+
+
+    </form>
+    <script>
+        function sort_mdy() {
+            window.location.href = "sort_mdy.aspx?id=" + 12006;
+        }
+        function list_mdy() {
+
+            window.location.href = "content_mdy.aspx?type=add&sid=12006";
+        }
+    </script>
+
+    <script src="style/hdp/jqueryLibrary.min.js"></script>
+    <script src="style/hdp/jquery.imgbox.pack.js"></script>
+
+
+    <script>
+        $(function () {
+
+            $(".example").imgbox({
+                'speedIn': 100,
+                'speedOut': 100,
+                'alignment': 'center',
+                'overlayShow': true,
+                'allowMultiple': false
+            });
+        });
+    </script>
+
+    <script src="style/jroll.2.6.0.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var w = document.documentElement.clientWidth;
+            var h = document.documentElement.clientHeight;
+            document.getElementById("wrapper").style.height = h + "px";
+            document.getElementById("wrapper").style.width = w + "px";
+
+            var imgor = document.getElementById("chat-list"); //获取div
+            var img = imgor.getElementsByTagName("img"); //获取div内的图片
+            if (img.length == 0) {
+                document.getElementById("chat-list").style.padding = "20px"; //没有图片
+                document.getElementById("wrapper").style.background = "#FFF";
+                document.getElementById("main").style.background = "#FFF";
+            }
+            else {
+                document.getElementById("wrapper").style.background = "#FFF";
+                document.getElementById("main").style.background = "#FFF";
+            }
+        }
+
+        var jroll = new JRoll("#wrapper", {
+            id: "demo8",
+            scrollX: "false",
+            scrollY: "true",
+            momentum: "false",
+            scrollBarY: "true",
+
+
+        });
+    </script>
+    <script>
+        if (localStorage.getItem("12006") == null) {
+            localStorage.setItem("12006", JSON.stringify({ "k": "1" }));//转换成json字符串序列
+            $.ajax({
+                type: "POST",
+                url: "ashx/click.ashx",
+                data: { id: "12006", },
+                success: function (data) {
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>
